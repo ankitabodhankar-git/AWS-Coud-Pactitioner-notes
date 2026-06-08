@@ -1,0 +1,237 @@
+Module 6 – Storage
+Lesson 1 – Introduction to Storage
+
+AWS provides storage services to store, access, manage, and back up data in the cloud. Instead of using physical storage hardware, AWS provides virtual storage solutions that can scale according to business needs.
+
+AWS offers three main types of storage:
+
+Block Storage
+Object Storage
+File Storage
+Why Different Storage Types?
+
+Just like a coffee shop stores different things in different places:
+
+Coffee beans → Airtight containers
+Paperwork → Filing cabinet
+Secret recipes → Locked safe
+
+Similarly, AWS uses different storage solutions for different types of data because not all data has the same requirements.
+
+Block Storage
+
+Block storage divides data into small pieces called blocks.
+
+Each block can be updated independently without changing the entire file.
+
+Because of this, block storage provides:
+
+Fast access
+Low latency
+Efficient updates
+
+Block storage is ideal for:
+
+Applications
+Databases
+Frequent updates
+Fast read/write operations
+Features of Block Storage
+Data stored in blocks
+Individual blocks can be modified
+Persistent storage
+Low latency performance
+Can be encrypted
+Supports snapshots (backups)
+AWS Block Storage Services
+Amazon EC2 Instance Store
+Unmanaged service
+Non-persistent storage
+High-performance storage
+Directly attached to EC2 instances
+Used for temporary data
+Amazon Elastic Block Store (Amazon EBS)
+Managed service
+Persistent storage
+Attached to EC2 instances
+Multiple volume types
+Suitable for different workloads
+Object Storage
+
+Object storage stores data as objects.
+
+Each object contains:
+
+Actual data
+Unique identifier (ID)
+Metadata
+
+Metadata helps organize and retrieve data efficiently.
+
+Unlike block storage, if any change is made, the entire object must be rewritten.
+
+Object Storage Structure
+
+Objects are stored in:
+
+Buckets
+
+Buckets use a flat structure rather than folders.
+
+Best Use Cases
+
+Object storage is ideal for:
+
+Videos
+Backups
+Images
+Logs
+Files that do not change frequently
+Benefits of Object Storage
+Unlimited scalability
+Efficient metadata management
+Easy search and analytics
+Store massive amounts of unstructured data
+AWS Object Storage Service
+Amazon Simple Storage Service (Amazon S3)
+
+Amazon S3 is:
+
+Fully managed
+Scalable
+Object storage service
+
+Used for storing and retrieving any amount of data from anywhere.
+
+File Storage
+
+File storage uses a traditional hierarchical file system.
+
+Files are organized using:
+
+Folders
+ └── Subfolders
+      └── Files
+
+File storage can be shared among multiple users and applications.
+
+Benefits of File Storage
+Shared access
+Familiar folder structure
+Works with most systems
+Minimal code changes required
+Best Use Cases
+
+File storage is ideal for:
+
+Shared documents
+Content management systems
+Team collaboration
+Shared application data
+AWS File Storage Services
+Amazon Elastic File System (Amazon EFS)
+Fully managed
+Scalable
+NFS file system
+Works with AWS services and on-premises resources
+Amazon FSx
+
+Fully managed file storage service for:
+
+Windows
+Lustre
+NetApp ONTAP
+Additional Storage Services
+
+Some AWS storage services do not fit directly into block, object, or file storage categories.
+
+AWS Storage Gateway
+
+AWS Storage Gateway is:
+
+Fully managed
+Hybrid cloud storage service
+
+Provides on-premises access to virtually unlimited cloud storage.
+
+AWS Elastic Disaster Recovery
+
+AWS Elastic Disaster Recovery is:
+
+Fully managed
+Disaster recovery service
+
+Used to recover:
+
+Physical servers
+Virtual servers
+Cloud-based servers
+
+into AWS.
+
+AWS Shared Responsibility Model for Storage
+
+AWS groups storage services into three categories:
+
+Fully Managed
+Managed
+Unmanaged
+Fully Managed Services
+
+AWS manages:
+
+Hardware
+Infrastructure
+Storage stack
+Data durability
+Availability
+Encryption at rest
+Replication
+
+Customer manages:
+
+Data
+Access controls
+Service configuration
+
+Customer responsibility is lowest.
+
+Managed Services
+
+AWS manages:
+
+Storage infrastructure
+Hardware redundancy
+Volume replication
+
+Customer manages:
+
+Backup strategies
+Encryption configuration
+Performance optimization
+Capacity planning
+
+Customer responsibility is higher than fully managed services.
+
+Unmanaged Services
+
+AWS manages only:
+
+Physical hardware
+Network infrastructure
+
+Customer manages:
+
+Data
+Backup and recovery
+Encryption
+Performance optimization
+Durability
+
+Customer responsibility is highest.
+
+Storage Services Summary
+Storage Type	AWS Service
+Block Storage	EC2 Instance Store, Amazon EBS
+Object Storage	Amazon S3
+File Storage	Amazon EFS, Amazon FSx
