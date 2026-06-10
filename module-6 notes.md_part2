@@ -51,7 +51,7 @@ Supports versioning, logging, and access control
 Example:
 
 Bucket Name:
-anuja-portfolio-images
+ankita-portfolio-images
 
 Objects:
 logo.png
@@ -68,7 +68,7 @@ Thousands of files
 Millions of files
 Petabytes of data
 Highly Durable Storage
-
+https://skillbuilder.aws/cds/2904c5c9-71cc-407b-bf8f-c0a68df3cc5d/assets/M06_03_25_s3ElementsDataMetaKey.png
 Amazon S3 provides:
 
 99.999999999%
@@ -536,3 +536,214 @@ Automates:
 
 Transition between storage classes
 Object deletion
+
+
+//Lesson 6 – Amazon S3 Demonstration
+
+This lesson demonstrates how to use Amazon S3 through the AWS Management Console. It covers creating buckets, uploading files, managing permissions, metadata, and bucket configurations.
+
+Creating an S3 Bucket
+
+To start using Amazon S3, create a bucket. Every bucket name must be globally unique across all AWS accounts. While creating a bucket, choose the AWS Region where the bucket will be stored. By default, Block Public Access is enabled to keep the bucket secure.
+
+Creating Folders
+
+Folders help organize objects inside a bucket.
+
+Example:
+
+Bucket
+ ├── Images
+ ├── Documents
+ └── Backups
+
+Folders make it easier to manage large amounts of data.
+
+Uploading Files and Folders
+
+Files can be uploaded using:
+
+Add Files
+Drag and Drop
+
+Entire folders can also be uploaded, and Amazon S3 maintains the original folder structure.
+
+Object Metadata
+
+Metadata provides information about an object.
+
+System-Defined Metadata
+
+Automatically managed by AWS.
+
+Examples:
+
+File Size
+Creation Date
+Storage Class
+User-Defined Metadata
+
+Created by the user.
+
+Examples:
+
+Project = AWS Notes
+Owner = Anuja
+Bucket Properties
+
+Amazon S3 buckets support several configurations:
+
+Versioning
+Encryption
+Tags
+Intelligent-Tiering
+Static Website Hosting
+Versioning
+
+Versioning stores multiple versions of the same file.
+
+Example:
+
+resume_v1.pdf
+resume_v2.pdf
+resume_v3.pdf
+
+Helps recover deleted or modified files.
+
+Bucket Permissions
+
+Permissions control who can access bucket data.
+
+Important settings:
+
+Block Public Access
+Bucket Policy
+Object Ownership
+CORS
+Bucket Policy
+
+A Bucket Policy is a JSON-based permission document.
+
+It defines:
+
+Who gets access
+What actions are allowed
+Which resources are affected
+
+Example:
+
+Allow Upload
+Allow Read
+Allow Delete
+Management Features
+
+Amazon S3 also provides:
+
+Lifecycle Rules
+Replication
+Inventory Reports
+
+Lesson 6 – Amazon S3 Demonstration
+
+This lesson demonstrates how to use Amazon S3 through the AWS Management Console. It covers creating buckets, uploading files, managing permissions, metadata, and bucket configurations.
+
+Creating an S3 Bucket
+
+To start using Amazon S3, create a bucket. Every bucket name must be globally unique across all AWS accounts. While creating a bucket, choose the AWS Region where the bucket will be stored. By default, Block Public Access is enabled to keep the bucket secure.
+
+Creating Folders
+
+Folders help organize objects inside a bucket.
+
+Example:
+
+Bucket
+ ├── Images
+ ├── Documents
+ └── Backups
+
+Folders make it easier to manage large amounts of data.
+
+Uploading Files and Folders
+
+Files can be uploaded using:
+
+Add Files
+Drag and Drop
+
+Entire folders can also be uploaded, and Amazon S3 maintains the original folder structure.
+
+Object Metadata
+
+Metadata provides information about an object.
+
+System-Defined Metadata
+
+Automatically managed by AWS.
+
+Examples:
+
+File Size
+Creation Date
+Storage Class
+User-Defined Metadata
+
+Created by the user.
+
+Examples:
+
+Project = AWS Notes
+Owner = Anuja
+Bucket Properties
+
+Amazon S3 buckets support several configurations:
+
+Versioning
+Encryption
+Tags
+Intelligent-Tiering
+Static Website Hosting
+Versioning
+
+Versioning stores multiple versions of the same file.
+
+Example:
+
+resume_v1.pdf
+resume_v2.pdf
+resume_v3.pdf
+
+Helps recover deleted or modified files.
+
+Bucket Permissions
+
+Permissions control who can access bucket data.
+
+Important settings:
+
+Block Public Access
+Bucket Policy
+Object Ownership
+CORS
+Bucket Policy
+
+A Bucket Policy is a JSON-based permission document.
+
+It defines:
+
+Who gets access
+What actions are allowed
+Which resources are affected
+
+Example:
+
+Allow Upload
+Allow Read
+Allow Delete
+Management Features
+
+Amazon S3 also provides:
+
+Lifecycle Rules
+Replication
+Inventory Reports..
