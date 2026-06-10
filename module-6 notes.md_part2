@@ -1,0 +1,538 @@
+Module 6 – Storage
+Lesson 4 – Amazon Simple Storage Service (Amazon S3)
+
+Amazon S3 (Simple Storage Service) is a fully managed object storage service that allows you to store and retrieve virtually unlimited amounts of data in the AWS Cloud. It is designed for storing unstructured data such as images, videos, documents, backups, logs, and application files.
+
+What is Amazon S3?
+
+Amazon S3 stores data as objects.
+
+Instead of storing files in folders like a traditional file system, S3 stores files as objects inside containers called buckets.
+
+Bucket
+│
+├── image.jpg
+├── video.mp4
+├── backup.zip
+└── document.pdf
+S3 Objects
+
+An S3 object is the fundamental unit of storage in Amazon S3.
+
+Each object contains:
+
+Actual data (file)
+Metadata
+Unique identifier (Key)
+
+Objects can store:
+
+Images
+Videos
+Documents
+Application data
+Backup files
+
+Object size:
+
+Few bytes minimum
+Up to 5 TB maximum per object
+S3 Buckets
+
+A bucket is a container used to store objects.
+
+Features:
+
+Globally unique bucket name
+Can store virtually unlimited objects
+Created in a specific AWS Region
+Supports versioning, logging, and access control
+
+Example:
+
+Bucket Name:
+anuja-portfolio-images
+
+Objects:
+logo.png
+profile.jpg
+resume.pdf
+Key Features of Amazon S3
+Virtually Unlimited Storage
+
+There is no practical limit on the amount of data stored in S3.
+
+You can store:
+
+Thousands of files
+Millions of files
+Petabytes of data
+Highly Durable Storage
+
+Amazon S3 provides:
+
+99.999999999%
+
+(11 Nines) durability.
+
+AWS automatically stores multiple copies of objects across infrastructure within a Region.
+
+This protects data from loss.
+
+Versioning
+
+Versioning protects files from:
+
+Accidental deletion
+Accidental modification
+
+Example:
+
+Version 1
+Resume.pdf
+
+Version 2
+Resume.pdf
+
+Version 3
+Resume.pdf
+
+Previous versions can be restored.
+
+Managed Service
+
+AWS handles:
+
+Infrastructure
+Scaling
+Availability
+Replication
+
+Users only manage their data.
+
+Common Use Cases
+Website Hosting
+
+Store website files such as:
+
+HTML
+CSS
+JavaScript
+Images
+Backup Storage
+
+Store backups of:
+
+Applications
+Databases
+Files
+Media Storage
+
+Store:
+
+Images
+Videos
+Audio files
+Data Archiving
+
+Store long-term business data.
+
+Data Lakes
+
+Store large amounts of structured and unstructured data for analytics.
+
+Example: Ecommerce Website
+
+An online shopping website stores:
+
+Product Images
+Product Videos
+Documents
+
+inside Amazon S3.
+
+When customers open the website, the images are retrieved directly from S3.
+
+Even if traffic suddenly increases, S3 automatically scales.
+
+Security in Amazon S3
+
+Everything stored in S3 is:
+
+PRIVATE BY DEFAULT
+
+Only the object owner can access it until permissions are granted.
+
+Bucket Policies
+
+Bucket Policies control:
+
+Who can access data
+What actions they can perform
+
+Example:
+
+Allow Public Read Access
+
+or
+
+Allow Only Company Employees
+Identity-Based Policies (IAM Policies)
+
+Permissions can also be controlled using IAM users, groups, and roles.
+
+Example:
+
+Developer
+→ Upload Files
+
+Manager
+→ View Files
+
+Admin
+→ Full Access
+Encryption
+
+Amazon S3 supports encryption for security.
+
+Encryption at Rest
+
+Protects data stored inside S3 buckets.
+
+Encryption in Transit
+
+Protects data while moving between:
+
+User
+↓
+Internet
+↓
+Amazon S3
+Additional Security Features
+Presigned URLs
+
+Provide temporary access to objects.
+
+Example:
+
+Valid for 1 Hour
+
+After expiry, access is automatically removed.
+
+S3 Access Points
+
+Simplify access management for shared datasets.
+
+S3 Audit Logs
+
+Track:
+
+Who accessed data
+When data was accessed
+What actions were performed
+Benefits of Amazon S3
+Scalability
+
+Stores virtually unlimited data.
+
+Durability
+
+11 Nines durability protects data.
+
+Cost Optimization
+
+Supports lifecycle policies and storage classes.
+
+Security
+
+Private by default with multiple security controls.
+
+Broad Use Cases
+
+Suitable for websites, backups, archives, media storage, and analytics.
+
+
+
+
+// Lesson 5 – Amazon S3 Storage Classes and S3 Lifecycle
+
+Amazon S3 provides multiple storage classes so you can store data based on how often it is accessed. Frequently accessed data uses one storage class, while rarely accessed or archived data uses another. This helps optimize storage costs while maintaining the required level of availability and performance.
+
+Why S3 Storage Classes?
+
+Not all data is accessed equally.
+
+Example:
+
+New Product Images → Accessed Daily
+1-Year-Old Backups → Rarely Accessed
+10-Year Compliance Records → Almost Never Accessed
+
+Storing all data in the same storage class would be expensive.
+
+AWS provides different storage classes to reduce costs.
+
+Amazon S3 Storage Classes
+1. S3 Standard
+
+Default storage class.
+
+Features
+Frequently accessed data
+Low latency
+High throughput
+Multi-AZ storage
+High availability
+Use Cases
+Dynamic websites
+Mobile applications
+Gaming applications
+Big Data analytics
+Frequently used files
+Example
+Website Images
+Product Photos
+Application Files
+2. S3 Standard-IA
+
+(Infrequent Access)
+
+Used when data is accessed less frequently but must be available immediately when needed.
+
+Features
+Lower storage cost than Standard
+Fast retrieval
+Multi-AZ durability
+Use Cases
+Backups
+Disaster recovery files
+Older project files
+Example
+Monthly Backup Files
+Old Customer Reports
+3. S3 Intelligent-Tiering
+
+Automatically moves objects between storage tiers based on usage patterns.
+
+Features
+Automatic optimization
+No need to manually manage lifecycle rules
+Cost-efficient
+Use Cases
+Data lakes
+Unknown access patterns
+Large datasets
+Example
+Company Documents
+Research Data
+
+AWS automatically decides the best tier.
+
+4. S3 Glacier Instant Retrieval
+
+For archived data that still requires immediate access.
+
+Features
+Lower cost
+Millisecond retrieval
+Archive storage
+Use Cases
+Medical images
+Media archives
+Historical data
+Example
+X-Ray Images
+Old Video Content
+5. S3 Glacier Flexible Retrieval
+
+For archive data that is rarely accessed.
+
+Features
+Lower storage cost
+Retrieval time:
+Minutes
+Hours
+Use Cases
+Long-term backups
+Archive storage
+Example
+Old Company Backups
+Archived Documents
+6. S3 Glacier Deep Archive
+
+Lowest-cost storage class.
+
+Features
+Very low storage cost
+Retrieval within about 12 hours
+Use Cases
+Compliance records
+Legal documents
+Long-term preservation
+Example
+10-Year Tax Records
+Government Archives
+7. S3 One Zone-IA
+
+Stores data in a single Availability Zone.
+
+Features
+Lower cost
+Less resilience than Multi-AZ options
+Use Cases
+Easily recreated data
+Secondary backups
+8. S3 Express One Zone
+
+Provides extremely fast access in a single Availability Zone.
+
+Use Cases
+Performance-sensitive applications
+High-speed workloads
+Storage Class Comparison
+Storage Class	Access Frequency
+S3 Standard	Frequently Accessed
+Standard-IA	Occasionally Accessed
+Intelligent-Tiering	Unknown Access Pattern
+Glacier Instant Retrieval	Rare Access but Immediate Retrieval
+Glacier Flexible Retrieval	Rare Access
+Glacier Deep Archive	Almost Never Accessed
+One Zone-IA	Infrequent Access (Single AZ)
+Express One Zone	High-Speed Access
+S3 Lifecycle
+
+S3 Lifecycle automatically manages data throughout its lifecycle.
+
+Instead of manually moving files between storage classes, AWS does it automatically.
+
+Lifecycle Actions
+1. Transition Action
+
+Moves objects to another storage class.
+
+Example:
+
+Day 0
+↓
+S3 Standard
+
+Day 30
+↓
+S3 Standard-IA
+
+Day 90
+↓
+S3 Glacier
+
+Day 365
+↓
+S3 Glacier Deep Archive
+2. Expiration Action
+
+Deletes objects automatically after a defined period.
+
+Example:
+
+Log Files
+↓
+Store for 90 Days
+↓
+Automatically Delete
+Example Lifecycle Policy
+
+Imagine social media posts.
+
+New Post
+↓
+Frequently Accessed
+
+After 30 Days
+↓
+Less Accessed
+
+After 1 Year
+↓
+Archive
+
+After 5 Years
+↓
+Delete
+
+Lifecycle policies automate this process.
+
+Benefits of S3 Lifecycle
+Cost Optimization
+
+Automatically moves data to cheaper storage.
+
+Automation
+
+No manual management required.
+
+Compliance
+
+Retains data for required periods.
+
+Storage Efficiency
+
+Deletes unnecessary data automatically.
+
+Real-Life Example
+
+A company stores:
+
+Customer Logs
+
+Access Pattern:
+
+First 30 Days → Frequently Used
+
+Next 60 Days → Occasionally Used
+
+After 90 Days → Rarely Used
+
+Lifecycle Policy:
+
+Day 0 → S3 Standard
+
+Day 30 → Standard-IA
+
+Day 90 → Glacier
+
+Later → Deep Archive
+
+Eventually → Delete
+
+This significantly reduces storage costs.
+
+Lesson Summary
+S3 Standard
+
+Frequently accessed data
+
+S3 Standard-IA
+
+Infrequently accessed data
+
+S3 Intelligent-Tiering
+
+Automatically optimizes storage costs
+
+Glacier Instant Retrieval
+
+Archive + Immediate access
+
+Glacier Flexible Retrieval
+
+Archive + Minutes/Hours retrieval
+
+Glacier Deep Archive
+
+Lowest-cost archive storage
+
+S3 Lifecycle
+https://skillbuilder.aws/cds/2904c5c9-71cc-407b-bf8f-c0a68df3cc5d/assets/M06_03_30_S3LifecycleFlow.png
+Automates:
+
+Transition between storage classes
+Object deletion
