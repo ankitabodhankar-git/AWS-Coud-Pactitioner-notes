@@ -1,0 +1,359 @@
+Module 8 – AI/ML and Data Analytics
+**Lesson 1: Introduction to AI and Machine Learning**
+AWS provides AI/ML and Data Analytics solutions that help organizations:
+Analyze historical data
+Predict future trends
+Automate processes
+Generate insights from large datasets
+
+AI and ML are used in many industries including:
+E-commerce
+Healthcare
+Finance
+Research
+Manufacturing
+Artificial Intelligence (AI)
+
+Artificial Intelligence (AI) is a broad field focused on developing intelligent computer systems capable of performing human-like tasks.
+
+// Examples
+Voice assistants
+Chatbots
+Image recognition
+Language translation
+Recommendation systems
+Machine Learning (ML)
+
+Machine Learning (ML) is a subset of AI.
+
+Instead of writing explicit rules, machines learn patterns from historical data.
+
+ML trains machines to perform complex tasks without direct instructions.
+
+Coffee Shop Example
+
+Suppose a coffee shop tracks:
+
+Customer purchases
+Rush hours
+Popular drinks
+Sales trends
+
+Using ML, the coffee shop can:
+
+Predict future demand
+Recommend products
+Estimate inventory requirements
+Suggest new menu items
+Traditional Programming vs Machine Learning
+Traditional Programming
+
+Example:
+
+IF customer buys Caramel Latte
+THEN recommend Cheese Danish
+
+Rules must be manually created.
+
+Machine Learning
+
+Instead of predefined rules:
+
+Historical sales data is analyzed
+Hidden patterns are discovered
+Recommendations become personalized
+
+Example:
+
+Customer A:
+
+Latte + Muffin
+
+Customer B:
+
+Latte + Sandwich
+
+ML learns different preferences automatically.
+
+Machine Learning Process
+Step 1: Training
+
+Large amounts of historical data are analyzed.
+
+Examples:
+
+Sales records
+Customer orders
+Social media data
+Sensor data
+
+ML identifies patterns hidden inside the data.
+
+Step 2: Model Creation
+
+After training, an ML Model is produced.
+
+The model contains learned patterns.
+
+Step 3: Inference
+
+New data is given to the model.
+
+The model uses learned patterns to:
+
+Make predictions
+Make recommendations
+Make decisions
+Example
+
+Historical Data:
+
+Customer buys Latte + Muffin
+Customer buys Latte + Muffin
+Customer buys Latte + Muffin
+
+ML learns pattern.
+
+New Customer:
+
+Orders Latte
+
+Model predicts:
+
+Recommend Muffin
+AI Example in Coffee Shop
+AI-Powered Ordering Kiosk
+
+Customer says:
+
+I want a large cappuccino.
+AI:
+
+Understands speech
+Processes order
+Updates register
+AI can also ask:
+
+Would you like an extra espresso shot?
+This uses:
+
+NLP (Natural Language Processing)
+
+Ability of computers to understand human language.
+
+// Another AI Example
+
+AI analyzes:
+Coffee trends on social media
+Historical sales data
+
+Then predicts:
+Popular drinks next week
+New product ideas
+AWS AI/ML Services Mentioned
+
+AWS provides services such as:
+Amazon SageMaker AI
+Used to:
+Build ML models
+Train ML models
+Deploy ML models
+
+AWS also provides pre-built AI services for:
+Language translation
+Image recognition
+Text analysis
+Importance of Data
+
+AI models require quality data.
+
+Data sources may include:
+Sales records
+Social media posts
+Sensor readings
+Customer feedback
+
+What is produced as a result of the ML training process?
+
+Correct Answer
+
+✅ An ML model that can make predictions or decisions
+
+
+
+**Module 8 – Lesson 2: AI/ML on AWS**
+
+Artificial Intelligence (AI) and Machine Learning (ML) are used by businesses worldwide to solve real-world problems and improve decision-making. Amazon itself uses ML models in its e-commerce recommendation engine, fulfillment center optimization, and many other business operations. Machine Learning can be used for predicting trends, making decisions, and detecting anomalies. For example, ML models can predict future stock prices, route customer calls to the correct department based on voice requests, and identify suspicious banking transactions or fraud.
+
+AWS provides AI and ML solutions through the AWS AI/ML Stack, which consists of three tiers. The first tier is AWS AI Services, which provides pre-built and pre-trained AI models. These services are ready to use without requiring ML knowledge. Examples include Amazon Polly for converting text into speech and Amazon Comprehend for text analysis and sentiment analysis.
+
+The second tier is AWS ML Services, where businesses can create their own machine learning models. The primary service is Amazon SageMaker AI. SageMaker helps users build, train, deploy, monitor, debug, and manage machine learning models using fully managed AWS infrastructure. It also provides tools for experiment tracking, data visualization, and model monitoring in one environment.
+
+The third tier is ML Frameworks and Infrastructure, which is the most customizable approach. Businesses can build highly specialized machine learning solutions using AWS infrastructure, purpose-built AI chips, and popular machine learning frameworks. These solutions can run on ML-optimized Amazon EC2 instances for maximum flexibility and control.
+
+//Common Business Use Cases of Machine Learning//
+Predict trends such as future stock prices.
+Make decisions such as routing callers to the correct department.
+Detect anomalies such as banking fraud.
+Product recommendation systems.
+Customer behavior analysis.
+Demand forecasting.
+AWS AI/ML Stack
+
+1. AI Services
+
+Pre-built, pre-trained models.
+Ready to use.
+Example: Amazon Polly, Amazon Comprehend.
+
+2. ML Services
+
+Build, train, and deploy custom ML models.
+Example: Amazon SageMaker AI.
+
+3. ML Frameworks & Infrastructure
+
+Fully customized ML solutions.
+Uses specialized hardware and ML frameworks.
+Runs on ML-optimized EC2 instances.
+
+
+
+
+**AWS AI/ML Solutions**
+In this lesson, you will learn how to do the following:
+
+Describe the benefits and purpose of the services contained in each tier of the AWS AI/ML stack.
+
+Let's examine the three tiers of the AWS AI/ML stack in more detail. You can think of the tiers as a progression from pre-built, easily deployable managed solutions to highly customized solutions that require more skill to implement.
+
+
+T**ier 1: Pre-built AWS AI services**
+
+The AWS AI services tier is made up of pre-built models that are already trained to perform specific functions. These ready-to-use, managed services can help you quickly solve for a variety of business use cases. In the next section, you will learn about the following three groups of AWS AI services:
+
+Language services
+
+Computer vision and search services
+
+Conversational AI and personalization services
+
+
+Language services
+
+AWS AI language services are great for when you need to interpret text or speech and transform it into something meaningful. Let's examine how these services solve for some common use cases.
+
+
+Amazon Comprehend
+
+Amazon Comprehend uses natural language processing to extract key insights from documents. It develops these insights by recognizing key phrases, language, sentiment, and other common elements in documents.
+
+Use cases: Content classification, customer sentiment analysis, and compliance monitoring
+
+
+Amazon Polly
+
+Amazon Polly converts text into lifelike speech. It supports multiple languages, different genders, and a variety of accents.
+
+Use cases: Virtual assistants, e-learning applications, and accessibility enhancements for visually impaired users
+
+
+Amazon Transcribe
+
+Amazon Transcribe converts speech into text. It supports multiple languages and offers features such as speaker identification, custom vocabulary, and real-time transcription.
+
+Use Cases: Customer call transcription, automated subtitling, and metadata generation for media content.
+
+
+Amazon Translate
+
+Amazon Translate is a text translation service. This service is ideal for global communication because it supports real-time and batch text translation across multiple languages.
+
+Use cases: Document translation and multi-language application integrations
+
+Computer vision and search services
+
+These services are ideal for answering questions and gathering insights from various types of content sources such as documents, images, videos, and more. Let's look at some examples.
+
+
+
+Amazon Kendra
+
+Amazon Kendra uses natural language processing to search for answers within large amounts of enterprise content. Because it understands the context of a query, it can return more precise and relevant answers than just a list of documents with matching keywords.
+
+Use cases: Intelligent search, chatbots, and application search integration
+
+
+Amazon Rekognition
+
+Amazon Rekognition is a video analysis service. It can identify objects, people, text, scenes, and activities within images and videos stored in Amazon Simple Storage Service (Amazon S3).
+
+Use cases: Content moderation, identity verification, media analysis, and home automation experiences
+
+
+Amazon Textract
+
+Amazon Textract detects and extracts typed and handwritten text found in documents, forms, and even tables within documents.
+
+Use cases: Financial, healthcare, and government form text extraction for quick processing
+
+Conversational AI and personalization services
+
+With these services, users can interact with your apps through text and voice conversations. You can also present your customers with product recommendations personalized just for them. Let's explore these services.
+
+
+
+Amazon Lex
+
+With Amazon Lex, you can add voice and text conversational interfaces to your applications. This service uses both natural language understanding (NLU) and automatic speech recognition (ASR) to create lifelike conversations.
+
+Use cases: Virtual assistants, natural language search for FAQs, and automated application bots
+
+
+Amazon Personalize
+
+With Amazon Personalize, you can use historical data to build intelligent applications with personalized recommendations for your customers.
+
+Use cases: Personalized streaming, product, and trending recommendations
+
+**Tier 2: ML services**
+
+The ML services tier provides a more customized approach for customers who want a bit more control over their ML solutions without having to manage infrastructure. SageMaker AI is a key offering in this tier.
+
+
+
+Amazon SageMaker AI
+
+With this fully managed service, you can build, train, and deploy your own ML models without worrying about infrastructure. The SageMaker AI integrated development environment (IDE) provides simplified access control and transparency over your ML projects. You can track model training experiments, visualize data, and debug and monitor your workflows all within one environment. SageMaker AI even offers access to hundreds of pre-trained models that you can deploy in a few quick steps.
+
+Key benefits of SageMaker AI
+
+To learn more about key SageMaker AI benefits, choose each of the following flashcards.
+
+
+Click to flipChoice of ML tools
+
+
+Click to flipFully managed infrastructure
+
+
+Click to flipRepeatable ML workflows
+
+**Tier 3: ML frameworks and infrastructure**
+
+Some organizations have highly specialized needs that require complete control over the ML training process. They can use in-house expertise, ML frameworks, and AWS infrastructure to develop their own ML solutions.
+
+
+Core components
+
+
+ML frameworks
+
+An ML framework is a software library or tool that provides experienced ML practitioners with pre-built, optimized components for building machine learning models. AWS supports ML frameworks like PyTorch, Apache M-X Net, and TensorFlow.
+
+
+AWS ML infrastructure
+
+AWS ML infrastructure, such as ML-optimized Amazon Elastic Compute Cloud (Amazon EC2) instances, Amazon EMR, and Amazon Elastic Container Service (Amazon ECS), can support these custom solutions. These services provide high performance and flexibility for advanced ML workloads.
+
+
