@@ -1,0 +1,180 @@
+Module 8 – **Lesson 4: Introduction to Generative AI on AWS (Notes)**
+
+Generative AI is a type of Deep Learning, and Deep Learning itself is a subset of Machine Learning (ML).
+
+Deep Learning (DL)
+Deep Learning uses Artificial Neural Networks that mimic the human brain. These networks contain multiple layers of artificial neurons. Each layer processes information and passes it to the next layer until a final prediction or result is produced.
+Deep Learning is used for advanced tasks such as:
+Computer Vision
+Natural Language Processing (NLP)
+Speech Recognition
+Image Generation
+Generative AI
+
+Generative AI is a type of Deep Learning that can create new content and ideas such as:
+
+Conversations
+Stories
+Images
+Videos
+Music
+Code
+
+Unlike traditional ML models that are trained for one specific task, Generative AI models can perform multiple tasks.
+
+Foundation Models (FMs)
+
+Generative AI is powered by extremely large Machine Learning models called Foundation Models (FMs).
+
+Foundation Models:
+
+Pre-trained on massive amounts of data.
+Can be adapted for multiple tasks.
+Form the base for Generative AI applications.
+Understand patterns from text, images, videos, and other data.
+Large Language Models (LLMs)
+
+A Large Language Model (LLM) is a popular type of Foundation Model trained on huge amounts of text data.
+
+Examples:
+ChatGPT
+Amazon Q
+Claude
+Gemini
+
+LLMs can:
+Answer questions
+Generate text
+Summarize documents
+Write code
+Translate languages
+AWS Generative AI Services
+
+1. Amazon SageMaker JumpStart
+ML hub containing Foundation Models and pre-built ML solutions.
+Deploy models with just a few clicks.
+Fine-tune models using your own data.
+Suitable for quickly building AI applications.
+2. Amazon Bedrock
+Fully managed Generative AI service.
+Provides access to Foundation Models from Amazon and leading AI companies.
+Customize models using your own data.
+No infrastructure management required.
+Access multiple Foundation Models through a common API.
+3. Amazon Q
+AI-powered assistant for businesses and developers.
+Integrates with company information and repositories.
+Can answer questions, provide recommendations, and automate tasks.
+
+Types:
+
+Amazon Q Business → Business productivity assistant.
+Amazon Q Developer → Helps developers write, debug, and understand code.
+Quick Revision
+
+AI → Machine Learning → Deep Learning → Generative AI
+
+Deep Learning: Uses neural networks inspired by the human brain.
+
+Generative AI: Creates new content like text, images, music, videos, and code.
+
+Foundation Models (FMs): Large pre-trained models used by Generative AI.
+
+LLMs: Foundation Models trained on human language.
+
+AWS Generative AI Services:
+SageMaker JumpStart → Deploy and customize pre-built models.
+Bedrock → Access and customize Foundation Models.
+Amazon Q → AI assistant for business and development.
+Real-Life Example
+https://skillbuilder.aws/cds/061d9ffd-658f-4503-b8d8-ae6d9f3f9a68/assets/M08_DL_defined.png
+https://skillbuilder.aws/cds/061d9ffd-658f-4503-b8d8-ae6d9f3f9a68/assets/M08_GenAI_defined.png
+https://skillbuilder.aws/cds/061d9ffd-658f-4503-b8d8-ae6d9f3f9a68/assets/M08_AWSGenAIServicesStack.png
+
+//Imagine you own an online clothing store:
+Machine Learning predicts which products customers might buy.
+Deep Learning analyzes customer images and identifies clothing styles.
+Generative AI creates product descriptions, marketing emails, and promotional images automatically.
+Amazon Bedrock provides the Foundation Model.
+Amazon Q helps employees find company information quickly.
+SageMaker JumpStart helps build custom AI solutions using your store data.
+
+
+
+
+**Module 8 – Lesson 5: AWS Generative AI Solutions**
+Amazon SageMaker JumpStart
+
+Amazon SageMaker JumpStart is a Machine Learning hub inside SageMaker AI that helps developers quickly build, train, and deploy ML models. It provides pre-built ML solutions and pre-trained Foundation Models (FMs) that can be deployed with just a few clicks. These models can also be fine-tuned using your own business data.
+
+Common Use Cases
+Rapid ML model deployment
+Custom fine-tuned AI solutions
+ML experiments and prototypes
+Testing different models before choosing one
+Benefits
+No need to build models from scratch
+Faster ML development
+Easy deployment
+Supports customization using your own data
+Amazon Bedrock
+
+Amazon Bedrock is a fully managed Generative AI service designed for working with Foundation Models (FMs). It provides access to powerful models from Amazon and leading AI companies through a single API.
+Examples:
+Claude
+Stable Diffusion
+Amazon Titan Models
+
+With Bedrock, you can customize models using your own data and deploy them without managing servers or infrastructure.
+
+Common Use Cases
+Enterprise-grade Generative AI applications
+Advanced AI chatbots
+Text generation
+Image generation
+Multimodal AI applications (Text + Images)
+
+//Benefits//
+Fully managed service
+No infrastructure management
+Access multiple FMs through one API
+Enterprise-level security and privacy
+Fast deployment of Generative AI applications
+
+Amazon Q
+Amazon Q is an AI-powered assistant that helps employees gain insights, improve productivity, automate tasks, and make decisions faster.
+Amazon Q has two major products:
+Amazon Q Business
+Amazon Q Business connects with company documents, repositories, and business systems.
+
+It can:
+Answer employee questions
+Extract insights
+Automate workflows
+Solve business problems
+Use Cases
+Information requests
+Knowledge management
+Workflow automation
+Business insights
+Amazon Q Developer
+
+Amazon Q Developer is designed specifically for software developers.
+It helps generate code, review code, detect issues, and improve development speed.
+Supported languages:
+Python
+Java
+JavaScript
+TypeScript
+C#
+
+
+// MCQ Answers//
+Q1:Advertising agency wants text + image generation without managing infrastructure.
+✅ Answer: Amazon Bedrock
+Reason: Bedrock provides fully managed multimodal Generative AI.
+
+Q2:Software company wants faster coding without sacrificing security and reliability.
+
+✅ Answer: Amazon Q Developer
+Reason: Amazon Q Developer generates code, reviews code, and improves developer productivity.
