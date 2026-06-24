@@ -1,5 +1,5 @@
-Module 6 – Storage
-Lesson 1 – Introduction to Storage
+**Module 6 – Storage**
+##Lesson 1 – Introduction to Storage
 
 AWS provides storage services to store, access, manage, and back up data in the cloud. Instead of using physical storage hardware, AWS provides virtual storage solutions that can scale according to business needs.
 
