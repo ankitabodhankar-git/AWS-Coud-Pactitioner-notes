@@ -1,5 +1,5 @@
-Module 6 – Storage
-Lesson 4 – Amazon Simple Storage Service (Amazon S3)
+**Module 6 – Storage**
+**Lesson 4 – Amazon Simple Storage Service (Amazon S3)**
 
 Amazon S3 (Simple Storage Service) is a fully managed object storage service that allows you to store and retrieve virtually unlimited amounts of data in the AWS Cloud. It is designed for storing unstructured data such as images, videos, documents, backups, logs, and application files.
 
